@@ -192,3 +192,165 @@ html {
   display: inline-block;
   margin-top: 150px;
 }
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.modal-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+    position: relative;
+    max-width: 560px;
+    height: ;
+    min-height: 315px;
+    margin: 350px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+}
+
+.modal-content {
+    position: relative;
+    width: 560px;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 2;
+}
+
+.modal-content h2 {
+   /* font-size: 28px;
+    color: #383322;
+    margin-bottom: 20px; */
+}
+
+.modal-content p {
+   /* font-size: 16px;
+    color: #000;
+    margin-bottom: 30px; */
+}
+
+/* Efeito das folhas (petals) - com a cor do seu tema */
+.modal:before, .modal:after,
+.modal .modal-content:before, .modal .modal-content:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(103, 194, 29); /* Cor do seu botão bt-red */
+    z-index: 1;
+    transition: all 0.5s;
+    transform-origin: 0 0;
+}
+
+.modal:before {
+    transform: rotate(0deg) scaleX(0);
+}
+.modal:after {
+    transform: rotate(90deg) scaleX(0);
+}
+.modal .modal-content:before {
+    transform: rotate(180deg) scaleX(0);
+}
+.modal .modal-content:after {
+    transform: rotate(270deg) scaleX(0);
+}
+
+/* Animação quando o modal abre */
+.modal-container.active .modal:before {
+    transform: rotate(0deg) scaleX(1);
+    transition-delay: 0.1s;
+}
+.modal-container.active .modal:after {
+    transform: rotate(90deg) scaleX(1);
+    transition-delay: 0.2s;
+}
+.modal-container.active .modal .modal-content:before {
+    transform: rotate(180deg) scaleX(1);
+    transition-delay: 0.3s;
+}
+.modal-container.active .modal .modal-content:after {
+    transform: rotate(270deg) scaleX(1);
+    transition-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .apresentacao__box {
+        flex-direction: column;
+    }
+    
+    .apresentacao__descricao,
+    .swiper-container {
+        width: 100%;
+    }
+    
+    .swiper {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        margin: 20px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .modal-content h2 {
+        font-size: 22px;
+    }
+}
+
+#closeModal {
+    background: rgb(103, 194, 29);
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#closeModal:hover {
+    background: rgb(90, 170, 25); /* Um tom levemente mais escuro para o hover */
+    transform: translateY(-2px);
+}
+
