@@ -68,9 +68,9 @@ html {
     float: right;
 }
 
-.menu__li {
-    float: left;
-    margin: 0 9px;
+.menu {
+    display: flex;
+    gap: 25px; 
 }
 
 .menu__link {
@@ -78,10 +78,6 @@ html {
     text-decoration: none;
     font-size: 14px;
     line-height: 16px;
-}
-
-.clear{
-    clear: both;
 }
 
 .center {
@@ -223,7 +219,7 @@ html {
 .modal {
     position: relative;
     max-width: 560px;
-    height: ;
+    height: 0px;
     min-height: 315px;
     margin: 350px;
     overflow: hidden;
@@ -246,17 +242,17 @@ html {
     z-index: 2;
 }
 
-.modal-content h2 {
-   /* font-size: 28px;
+/* .modal-content h2 {
+   font-size: 28px;
     color: #383322;
-    margin-bottom: 20px; */
-}
+    margin-bottom: 20px; 
+} */
 
-.modal-content p {
-   /* font-size: 16px;
+/* .modal-content p {
+   font-size: 16px;
     color: #000;
-    margin-bottom: 30px; */
-}
+    margin-bottom: 30px; 
+}*/
 
 /* Efeito das folhas (petals) - com a cor do seu tema */
 .modal:before, .modal:after,
@@ -353,4 +349,34 @@ html {
     background: rgb(90, 170, 25); /* Um tom levemente mais escuro para o hover */
     transform: translateY(-2px);
 }
+
+.mapa-escritorio {
+    display: flex;
+    justify-content:top; /* Centraliza horizontalmente */
+    align-items: left; /* Centraliza verticalmente */
+    width: 1110px; /* Largura fixa */
+    height: 768px; /* Altura fixa */
+    margin:auto; 
+   
+}
+
+.local h3 {
+    display: flex;
+    align-items: center; /* Mantém tudo alinhado verticalmente */
+    gap: 8px; /* Dá um espaçamento entre a imagem e o texto */
+    color: red;
+    
+}
+.texto-rio{  /*1110x768*/
+    font-size: 25px; 
+    font-weight: bold; 
+}
+
+/* Ajusta o tamanho do ícone */
+.icone-mapa {
+    width: 25px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção */
+    padding-right: 5px;
+}
+
 
