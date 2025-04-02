@@ -351,14 +351,15 @@ html {
 }
 
 .mapa-escritorio {
-    display: flex;
-    justify-content:top; /* Centraliza horizontalmente */
-    align-items: left; /* Centraliza verticalmente */
-    width: 1110px; /* Largura fixa */
-    height: 768px; /* Altura fixa */
-    margin:auto; 
-   
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 1110px;
+        margin: auto;
+        padding-top: 30px;
+    
 }
+
 
 .local h3 {
     display: flex;
@@ -376,7 +377,35 @@ html {
 .icone-mapa {
     width: 25px; /* Ajuste o tamanho conforme necessário */
     height: auto; /* Mantém a proporção */
-    padding-right: 5px;
+    padding-right: 0px;
 }
 
+.mapa-local {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
+.mapa-local-li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+    margin: 0px;
+    list-style: none;
+
+}
+
+.mapa-local-li li {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0px;
+    text-align: center;
+}
+
+.logo-li{
+    display: flex;
+    width: 114px;
+    height: 113px;
+    padding-top: 100px;
+}
