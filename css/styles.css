@@ -356,7 +356,8 @@ html {
         align-items: flex-start;
         width: 1110px;
         margin: auto;
-        padding-top: 30px;
+        padding-top: 65px;
+        padding-bottom: 30px;
     
 }
 
@@ -369,7 +370,7 @@ html {
     
 }
 .texto-rio{  /*1110x768*/
-    font-size: 25px; 
+    font-size: 15px; 
     font-weight: bold; 
 }
 
@@ -409,3 +410,44 @@ html {
     height: 113px;
     padding-top: 100px;
 }
+
+.icone {
+    border: 2px solid #6c8c5e; /* cor igual dos ícones */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .icone:hover {
+    background-color: #ffffffde;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .rede-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1110px;
+    margin: auto;
+    padding-top: 10px;
+    }
+
+  .imagem-redesocial {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+  
+  .rodape {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+  }
+  
